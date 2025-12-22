@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Quote Saver</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <h1>📜 Mini Quote Saver</h1>
+    <p>LocalStorage CRUD Project</p>
+  </header>
+
+  <main class="container">
+
+    <!-- CREATE -->
+    <section class="create-section">
+      <label for="quoteInput">New Quote</label>
+      <div class="input-row">
+        <input
+          type="text"
+          id="quoteInput"
+          placeholder="Type your quote here..."
+        >
+        <button id="addBtn">Add</button>
+      </div>
+    </section>
+
+    <!-- READ / UPDATE / DELETE -->
+    <section class="list-section">
+      <h2>Saved Quotes</h2>
+
+      <p id="emptyMsg">No quotes yet. Add one above 👆</p>
+
+      <ul id="quoteList">
+        <!--
+        Expected JS-generated structure:
+
+        <li class="quote-item">
+          <span class="quote-text">Stay hungry, stay foolish</span>
+
+          <input class="edit-input" type="text" value="Stay hungry, stay foolish">
+
+          <div class="actions">
+            <button class="edit-btn">Edit</button>
+            <button class="save-btn">Save</button>
+            <button class="delete-btn">Delete</button>
+          </div>
+        </li>
+        -->
+      </ul>
+    </section>
+
+  </main>
+
+</body>
+</html>

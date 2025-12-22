@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f2f4f7;
+  color: #222;
+}
+
+/* Header */
+.app-header {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Main container */
+.container {
+  max-width: 650px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Create section */
+.create-section label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buttons */
+button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addBtn {
+  background: #007bff;
+  color: white;
+}
+
+#addBtn:hover {
+  background: #0056b3;
+}
+
+/* List section */
+.list-section {
+  margin-top: 2rem;
+}
+
+#emptyMsg {
+  color: #777;
+  font-style: italic;
+}
+
+/* Quote item */
+.quote-item {
+  background: #f5f6f8;
+  padding: 0.7rem;
+  margin-bottom: 0.6rem;
+  border-radius: 6px;
+}
+
+.quote-text {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Edit input (hidden by default, JS will toggle) */
+.edit-input {
+  display: none;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.edit-btn {
+  background: #ffc107;
+}
+
+.save-btn {
+  background: #28a745;
+  color: white;
+  display: none; /* JS will show when editing */
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
