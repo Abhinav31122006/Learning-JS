@@ -35,4 +35,6 @@ enbl.addEventListener('click', async function(){
 
 send.addEventListener('click',function(){
     const notify = new Notification("👋 Hey there!")
+    stat.textContent = "Notification Sent!"
+    updateStatus()
 })
