@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Speech Pad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <h1>Speech Pad</h1>
+      <p>Speak naturally. Your words appear instantly.</p>
+    </header>
+
+    <section class="card">
+      <textarea id="output" placeholder="Click start and begin speaking..."></textarea>
+
+      <div class="controls">
+        <button id="start" class="primary">Start</button>
+        <button id="stop" class="danger">Stop</button>
+        <button id="save" class="success">Save</button>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Saved Notes</h2>
+      <ul id="notes"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
