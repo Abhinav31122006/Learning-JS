@@ -4,8 +4,21 @@ const save = document.querySelector('#save')
 const out = document.querySelector('#output')
 const list = document.querySelector('#notes')
 
-const SpeechRecognition =
-  window.SpeechRecognition || window.webkitSpeechRecognition
+function createNote(msg){
+  const item = document.createElement('li')
+    item.textContent = msg
+    list.prepend(item)
+}
+
+const noteArr = JSON.parse(localStorage.getItem('note')) || []
+for(let i of noteArr){
+  createNote(i)
+}
+
+
+
+
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 
 if (!SpeechRecognition) {
   alert("Speech Recognition not supported in this browser")
@@ -55,9 +68,9 @@ save.addEventListener('click', function(){
     const text = out.value.trim()
     if(!text) return
 
-    const item = document.createElement('li')
-    item.textContent = text
-    list.prepend(item)
+    createNote(text)
+    noteArr.push(text)
+    localStorage.setItem('note',JSON.stringify(noteArr))
 
     out.value = ""
     finalTranscript = ""
