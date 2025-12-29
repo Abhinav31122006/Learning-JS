@@ -1,6 +1,7 @@
 const start = document.querySelector('#start')
 const stp = document.querySelector('#stop')
 const save = document.querySelector('#save')
+const clear = document.querySelector('#clear')
 const out = document.querySelector('#output')
 const list = document.querySelector('#notes')
 
@@ -11,11 +12,10 @@ function createNote(msg){
 }
 
 const noteArr = JSON.parse(localStorage.getItem('note')) || []
+
 for(let i of noteArr){
   createNote(i)
 }
-
-
 
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
@@ -74,6 +74,12 @@ save.addEventListener('click', function(){
 
     out.value = ""
     finalTranscript = ""
+})
+
+clear.addEventListener('click', function () {
+  localStorage.removeItem('note')
+  list.innerHTML = ""
+  noteArr.length = 0
 })
 
 reco.onerror = function(e){

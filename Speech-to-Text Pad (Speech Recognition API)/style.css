@@ -95,6 +95,16 @@ button:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.35);
 }
 
+#clear {
+  background: linear-gradient(135deg, #2a2f55, #3a3f6e);
+  color: #e6e9ff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#clear:hover {
+  background: linear-gradient(135deg, #3a3f6e, #4a4f85);
+}
+
 .primary {
   background: linear-gradient(135deg, #4f7cff, #6a8bff);
 }
